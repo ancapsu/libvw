@@ -34,4 +34,5 @@ RUN dotnet publish -c release -o /app --no-restore
 FROM mcr.microsoft.com/dotnet/core/sdk:2.1
 WORKDIR /app
 COPY --from=build /app .
+EXPOSE 80
 ENTRYPOINT ["dotnet", "LibVisWeb.dll"]
