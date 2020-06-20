@@ -5,7 +5,7 @@ import { ApplicationState } from '../store';
 import RacMsg from '../message/racmsg';
 import * as AccountStore from '../store/Account';
 import ErrorMsg from '../message/errormsg';
-import Footer from './Footer/Footer';
+import Footer from './footer/Footer';
 import Header from './header/Header';
 import { routerActions } from 'react-router-redux';
 

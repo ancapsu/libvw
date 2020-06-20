@@ -7,7 +7,7 @@ import ReactDropzone, { DropzoneRenderArgs } from 'react-dropzone';
 import * as AccountStore from '../store/Account';
 import * as ArticleStore from '../store/Article';
 import ErrorMsg from '../message/errormsg';
-import Footer from './Footer/Footer';
+import Footer from './footer/Footer';
 import Header from './header/Header';
 import ShowAuthors from './ShowAuthors';
 import ShowCategories from './ShowCategories';
