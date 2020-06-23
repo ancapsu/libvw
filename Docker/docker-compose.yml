@@ -1,0 +1,28 @@
+version: '2.4'
+
+services: 
+  
+  libvw:
+    image: libvw
+    container_name: libvw
+    build: 
+      context: ../
+      dockerfile: Docker/Dockerfile
+    ports: 
+      - 8080:80
+    depends_on:
+      - mssql
+    
+  mssql:
+    image: libvw_mssql
+    container_name: libvw_mssql
+    build: 
+      context: ../
+      dockerfile: Docker/mssql.Dockerfile
+    ports: 
+      - 1433:1433
+    environment: 
+      ACCEPT_EULA: Y
+      SA_PASSWORD: Libvw01#
+      MSSQL_PID: Express
+      DATABASE_NAME: libvw
