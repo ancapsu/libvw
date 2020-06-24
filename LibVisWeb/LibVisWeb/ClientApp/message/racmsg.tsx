@@ -8653,7 +8653,7 @@ export default class RacMsg {
             { id: 650225, msg: 'Public information means that this information will be shown to anyone who accesses the site. Please be careful, use pseudonyms and non-identifiable photos.'},
             { id: 650226, msg: 'Private information means that only you ant the sites internal staff can see this information.'},
             { id: 650227, msg: 'Please provide your data below. We care about your privacy, so use a public name as you prefer to be called. This name will appear in the materials you indicate and will appear in the videos as well. It doesnt have to be your real name. Your email will be visible only to internal employees of the site, but it needs to be a real email and we will confirm that in the next step.'},
-            { id: 650228, msg: 'Coose a password'},
+            { id: 650228, msg: 'Choose a password'},
             { id: 650229, msg: 'Confirm your password'},
             { id: 650230, msg: 'We have sent a message to your email, with a code to confirm that it is a valid email. Fill in the code below and click confirm. After this confirmation, your account will be active.'},
             { id: 650231, msg: 'Enter the code sent in the email'},
