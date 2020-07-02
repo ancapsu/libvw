@@ -342,7 +342,7 @@
 }
 
 .mobile-menu-body {
-    position: absolute;
+    position: fixed;
     background-color: #000;
     color: #ffcc00;
     top: 100px;
