@@ -2,7 +2,7 @@
 Código dos sites visaolibertaria.com, visionlibertaria.com, libvw.com e ancap.su
 
 # como compilar
-Você vai precisar do Visual Studio 2017, com os módulos: .Net Core 2.1, C#, React. Embora versões mais recentes do Visual Studio possam funcionar, a experiência mostra que portar, mesmo para versões mais recentes pode ser trabalhoso. Melhor ter o VS2017. Você pode baixar a versão community, que é gratuita, aqui https://visualstudio.microsoft.com/pt-br/vs/older-downloads/
+Você vai precisar do Visual Studio 2017, com os módulos: .Net Core 3.1, C#, React. Embora versões mais recentes do Visual Studio possam funcionar, a experiência mostra que portar, mesmo para versões mais recentes pode ser trabalhoso. Melhor ter o VS2017. Você pode baixar a versão community, que é gratuita, aqui https://visualstudio.microsoft.com/pt-br/vs/older-downloads/
 
 É recomendado ter um SQL Server 2012, pode ser o Developer ou o Express, que são gratuitos. Não é necessário, mas usar o banco de dados de homologação na nuvem torna tudo bem demorado.
 
