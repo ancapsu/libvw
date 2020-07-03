@@ -26,7 +26,7 @@ export class StorageItem {
     value: any;
 
     constructor(data: IStorageItem) {
-
+        this.key = "";
         if (data.key != null)
             this.key = data.key;
 
