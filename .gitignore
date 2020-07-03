@@ -101,17 +101,17 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,osx
 
-/ LibVisWeb/.vs/LibVisWeb/v15/.suo
-/ LibVisWeb/.vs/LibVisWeb/DesignTimeBuild/.dtbcache
-/ LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide-shm
-/ LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide-wal
-/ LibVisWeb/.vs/config/applicationhost.config
-/ LibVisWeb/.vs/LibVisWeb/DesignTimeBuild/.dtbcache
-/ LibVisWeb/.vs/LibVisWeb/v15/.suo
-/ LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide
-/ LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide-shm
-/ LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide-wal
-/ LibVisWeb/LibVisWeb.sln
+/LibVisWeb/.vs/LibVisWeb/v15/.suo
+/LibVisWeb/.vs/LibVisWeb/DesignTimeBuild/.dtbcache
+/LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide-shm
+/LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide-wal
+/LibVisWeb/.vs/config/applicationhost.config
+/LibVisWeb/.vs/LibVisWeb/DesignTimeBuild/.dtbcache
+/LibVisWeb/.vs/LibVisWeb/v15/.suo
+/LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide
+/LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide-shm
+/LibVisWeb/.vs/LibVisWeb/v15/Server/sqlite3/storage.ide-wal
+/LibVisWeb/LibVisWeb.sln
 / LibVisWeb/LibVisWeb/appsettings.json
 
 

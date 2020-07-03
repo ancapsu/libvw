@@ -31,13 +31,19 @@ class Header extends React.Component<HeaderProps, {}> {
                 <div className="tda-container-half-yellow tda-container-size">
                     <div className="td-container td-header-row tda-header-row-yellow tda-container-size">
                         <div className="tda-header-chess-pattern tda-container-size">    
-                                                        
-                            <HeaderTop />
-
-                            <HeaderLogo />
-
-                            <HeaderMenu />
-
+                            <div>
+                                <div className="col-lg-12">
+                                    <HeaderTop />
+                                </div>
+                                <div className="row">
+                                    <div className="col-lg-12">
+                                        <HeaderLogo />
+                                    </div>
+                                    <div className="col-lg-12">
+                                        <HeaderMenu />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
