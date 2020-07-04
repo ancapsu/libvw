@@ -27,6 +27,21 @@ O react é usado com redux, então todas as informações de estado são mantida
 
 O diretório Models contém os exatos mesmos modelos que o diretório Models do C#. Tem que bater tudo ali, mesmo nome, mesmo campo, infelizmente. Isso poderia ser automatizado, mas não é. Se precisar incluir um campo em qualquer estrutura da Models C#, precisa fazer a mesma mudança em Models JS.
 
-A arquitetura usada é monolítica porque permite fazer o server rendering das páginas javascript. Daí o boot-client e o boot-server que fazem a mesma coisa no cliente e no servidor para permitir indexação. 
+A arquitetura usada é monolítica porque permite fazer o server rendering das páginas javascript. Daí o boot-client e o boot-server que fazem a mesma coisa no cliente e no servidor para permitir indexação.
 
 
+# Running with Docker
+Pode-se executar a aplicação de forma rápida e simples usando Docker, a aplicação já contêm os arquivos configurados. Segue abaixo os comandos e partimos do pré suposto que você já tem conhecimentos e instalações de Docker e Docker-compose em seu computador.
+
+### Deploy da aplicação e banco de dados
+```bash
+docker-compose -f Docker/docker-compose.yml up -d
+```
+Pronto, você já tem a aplicação e banco de dados rodando em seu computador. Basta acessar:
+```bash
+http://127.0.0.1:8080/
+```
+Para dar stop e remover tudo o que foi criado(containers,networks...):
+```bash
+docker-compose -f Docker/docker-compose.yml down
+```
