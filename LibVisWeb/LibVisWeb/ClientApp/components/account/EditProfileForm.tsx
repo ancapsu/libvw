@@ -12,8 +12,8 @@ import * as AccountModel from '../../models/Account';
 import { routerActions } from 'react-router-redux';
 import * as Verify from '../../message/verify';
 import { toastr } from 'react-redux-toastr';
+import WaitPanel from '../common/WaitPanel';
 
-const waitGif: string = require('../../theme/newspaper/img/wait.gif');
 const defaultProfile: string = require('../../theme/newspaper/img/defaultprofile.png');
 
 type EditProfileBaseProps =
@@ -173,9 +173,7 @@ class EditProfileForm extends React.Component<InjectedEditProfileFormProps, {}> 
 
                 <form role="form" onSubmit={this.props.handleSubmit(this.handleSubmitForm)}>
 
-                    <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                        <img src={waitGif} ></img>
-                    </div>
+                    <WaitPanel isContentReady={this.contentReady} />
 
                     <div className="vc_column wpb_column vc_column_container tdc-column td-pb-span4">
 

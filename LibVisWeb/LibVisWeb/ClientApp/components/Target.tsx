@@ -11,8 +11,7 @@ import Header from './header/Header';
 import ShowAuthors from './ShowAuthors';
 import ShowCategories from './ShowCategories';
 import ShowTargetAction from './ShowTargetAction';
-
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
+import WaitPanel from './common/WaitPanel';
 
 type TargetProps =
     AccountStore.AccountState
@@ -90,9 +89,7 @@ class Target extends React.Component<TargetProps, {}> {
 
                     <Header />
 
-                    <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                        <img src={waitGif} ></img>
-                    </div>
+                    <WaitPanel isContentReady={this.contentReady} />
 
                     <div className="container open-line"></div>
 

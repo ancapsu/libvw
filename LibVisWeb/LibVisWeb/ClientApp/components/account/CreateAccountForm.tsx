@@ -9,8 +9,7 @@ import * as AccountStore from '../../store/Account';
 import * as AccountModel from '../../models/Account';
 import { toastr } from 'react-redux-toastr';
 import * as Verify from '../../message/verify';
-
-const waitGif: string = require('../../theme/newspaper/img/wait.gif');
+import WaitPanel from '../common/WaitPanel';
 
 type CreateAccountBaseProps =
     AccountStore.AccountState
@@ -157,9 +156,7 @@ class CreateAccountForm extends React.Component<InjectedCreateAccountFormProps, 
                     </span>
                 </div>
 
-                <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                    <img src={waitGif} ></img>
-                </div>
+                <WaitPanel isContentReady={this.contentReady} />
 
                 <form id="captcha-form" role="form" onSubmit={this.props.handleSubmit(this.handleSubmitForm)}>
                                                 

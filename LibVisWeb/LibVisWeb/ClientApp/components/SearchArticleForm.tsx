@@ -13,8 +13,7 @@ import { routerActions } from 'react-router-redux';
 import * as Toastr from 'react-redux-toastr'
 import { SearchArticleModel } from 'ClientApp/models/Article';
 import ShowArticleRef from './ShowArticleRef';
-
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
+import WaitPanel from './common/WaitPanel';
 
 type SearchArticleBaseProps =
     AccountStore.AccountState
@@ -175,9 +174,7 @@ class SearchArticleForm extends React.Component<InjectedSearchArticleFormProps, 
 
                     <div className="vc_column wpb_column vc_column_container tdc-column td-pb-span12">
 
-                        <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                            <img src={waitGif} ></img>
-                        </div>
+                        <WaitPanel isContentReady={this.contentReady} />
 
                         <div className="wpb_wrapper">
                             <div className="td-pb-border-top">

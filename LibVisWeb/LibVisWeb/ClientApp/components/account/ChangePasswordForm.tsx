@@ -8,8 +8,8 @@ import RacMsg from '../../message/racmsg';
 import * as AccountStore from '../../store/Account';
 import * as AccountModel from '../../models/Account';
 import { toastr } from 'react-redux-toastr';
+import WaitPanel from '../common/WaitPanel';
 
-const waitGif: string = require('../../theme/newspaper/img/wait.gif');
 
 type ChangePasswordBaseProps =
     AccountStore.AccountState
@@ -113,9 +113,7 @@ class ChangePasswordForm extends React.Component<InjectedChangePasswordFormProps
                     </span>
                 </div>
 
-                <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                    <img src={waitGif} ></img>
-                </div>
+                <WaitPanel isContentReady={this.contentReady} />
 
                 <form role="form" onSubmit={this.props.handleSubmit(this.handleSubmitForm)}>
                     

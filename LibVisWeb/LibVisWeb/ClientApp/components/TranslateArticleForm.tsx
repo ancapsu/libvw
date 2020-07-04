@@ -12,8 +12,7 @@ import * as ArticleModel from '../models/Article';
 import * as ArticleStore from '../store/Article';
 import { routerActions } from 'react-router-redux';
 import * as Toastr from 'react-redux-toastr'
-
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
+import WaitPanel from './common/WaitPanel';
 
 type TranslateArticleBaseProps =
     AccountStore.AccountState
@@ -289,9 +288,7 @@ class TranslateArticleForm extends React.Component<InjectedTranslateArticleFormP
 
                     <div className="vc_column wpb_column vc_column_container tdc-column td-pb-span12">
 
-                        <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                            <img src={waitGif} ></img>
-                        </div>
+                        <WaitPanel isContentReady={this.contentReady} />
 
                         <div className="wpb_wrapper">
                             <div className="td-pb-border-top">

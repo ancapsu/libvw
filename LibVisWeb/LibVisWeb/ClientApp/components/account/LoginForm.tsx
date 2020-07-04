@@ -10,8 +10,6 @@ import * as AccountModel from '../../models/Account';
 import * as Verify from '../../message/verify';
 import { toastr } from 'react-redux-toastr';
 
-const waitGif: string = require('../../theme/newspaper/img/wait.gif');
-
 type LoginBaseProps =
     AccountStore.AccountState
     & Toastr.ToastrState

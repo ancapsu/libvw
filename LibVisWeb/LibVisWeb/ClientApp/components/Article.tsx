@@ -14,8 +14,8 @@ import ShowCategories from './ShowCategories';
 import ShowArticleAction from './ShowArticleAction';
 import { toastr } from 'react-redux-toastr';
 import { IncludeActionWithFile, ActionFile } from '../models/Article';
+import WaitPanel from './common/WaitPanel';
 
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
 const editPng: string = require('../theme/newspaper/img/edit.png');
 const deletePng: string = require('../theme/newspaper/img/delete.png');
 
@@ -369,9 +369,7 @@ class Article extends React.Component<ArticleProps, {}> {
 
                     <Header />
 
-                    <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                        <img src={waitGif} ></img>
-                    </div>
+                    <WaitPanel isContentReady={this.contentReady} />
 
                     <div className="container open-line"></div>
 

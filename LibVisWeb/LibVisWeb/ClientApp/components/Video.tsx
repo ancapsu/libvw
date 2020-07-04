@@ -10,8 +10,7 @@ import Footer from './footer/Footer';
 import Header from './header/Header';
 import ShowAuthors from './ShowAuthors';
 import ShowCategories from './ShowCategories';
-
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
+import WaitPanel from './common/WaitPanel';
 
 type VideoProps =
     AccountStore.AccountState
@@ -89,9 +88,7 @@ class Video extends React.Component<VideoProps, {}> {
 
                     <Header />
 
-                    <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                        <img src={waitGif} ></img>
-                    </div>
+                    <WaitPanel isContentReady={this.contentReady} />
 
                     <div className="container open-line"></div>
 

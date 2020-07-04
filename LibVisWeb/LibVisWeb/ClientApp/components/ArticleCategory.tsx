@@ -10,8 +10,7 @@ import Footer from './footer/Footer';
 import Header from './header/Header';
 import { ArticleModel } from 'ClientApp/models/Article';
 import ShowArticle from './ShowArticle';
-
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
+import WaitPanel from './common/WaitPanel';
 
 type ArticleCategoryProps =
     AccountStore.AccountState
@@ -100,9 +99,7 @@ class ArticleCategory extends React.Component<ArticleCategoryProps, {}> {
 
                     <Header />
 
-                    <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                        <img src={waitGif} ></img>
-                    </div>
+                    <WaitPanel isContentReady={this.contentReady} />
 
                     <div className="container open-line"></div>
 
