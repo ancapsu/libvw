@@ -25921,6 +25921,7 @@ header .td-icon-comments {
 .td-post-featured-image img {
   display: block;
   margin-bottom: 26px;
+  margin-left: 20px;
   width: 100%;
 }
 .td-post-featured-image .wp-caption-text {
