@@ -35,4 +35,4 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 WORKDIR /app
 COPY --from=build /app .
 EXPOSE 80
-ENTRYPOINT ["dotnet", "LibVisWeb.dll"]
+ENTRYPOINT ["dotnet", "LibVisWeb.dll", "--urls", "http://0.0.0.0;https://0.0.0.0"]
