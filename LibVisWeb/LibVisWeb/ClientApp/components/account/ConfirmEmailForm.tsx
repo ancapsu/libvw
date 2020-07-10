@@ -9,8 +9,7 @@ import * as AccountStore from '../../store/Account';
 import * as AccountModel from '../../models/Account';
 import * as Verify from '../../message/verify';
 import { toastr } from 'react-redux-toastr';
-
-const waitGif: string = require('../../theme/newspaper/img/wait.gif');
+import WaitPanel from '../common/WaitPanel';
 
 type ConfirmEmailBaseProps =
     AccountStore.AccountState
@@ -235,9 +234,7 @@ class ConfirmEmailForm extends React.Component<InjectedConfirmEmailFormProps, {}
                             </span>
                         </div>
 
-                        <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                            <img src={waitGif} ></img>
-                        </div>
+                        <WaitPanel isContentReady={this.contentReady} />
 
                         <div className="form-group">
                             <Field name="Email" component='input' type="email" className="form-control" id="Email" onChange={this.changeEmail} placeholder={RacMsg.Get(RacMsg.Id.EnterYourEmail)} />

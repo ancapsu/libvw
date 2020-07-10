@@ -8,9 +8,9 @@ import RacMsg from '../../message/racmsg';
 import * as AccountStore from '../../store/Account';
 import * as AccountModel from '../../models/Account';
 import * as Verify from '../../message/verify';
+import WaitPanel from '../common/WaitPanel';
 import { toastr } from 'react-redux-toastr';
 
-const waitGif: string = require('../../theme/newspaper/img/wait.gif');
 
 type ForgotPasswordBaseProps =
     AccountStore.AccountState
@@ -124,9 +124,7 @@ class ForgotPasswordForm extends React.Component<InjectedForgotPasswordFormProps
                     </span>
                 </div>
 
-                <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                    <img src={waitGif} ></img>
-                </div>
+                <WaitPanel isContentReady={this.contentReady} />
 
                 <form id="captcha-form" role="form" onSubmit={this.props.handleSubmit(this.handleSubmitForm)}>
                     

@@ -12,8 +12,7 @@ import * as VideoModel from '../models/Video';
 import * as VideoStore from '../store/Video';
 import { routerActions } from 'react-router-redux';
 import * as Toastr from 'react-redux-toastr'
-
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
+import WaitPanel from './common/WaitPanel';
 
 type EditVideoBaseProps =
     AccountStore.AccountState
@@ -205,9 +204,7 @@ class EditVideoForm extends React.Component<InjectedEditVideoFormProps, {}> {
 
                     <div className="vc_column wpb_column vc_column_container tdc-column td-pb-span12">
 
-                        <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                            <img src={waitGif} ></img>
-                        </div>
+                        <WaitPanel isContentReady={this.contentReady} />
 
                         <div className="wpb_wrapper">
                             <div className="td-pb-border-top">

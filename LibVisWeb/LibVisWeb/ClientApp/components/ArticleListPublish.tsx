@@ -11,8 +11,7 @@ import Header from './header/Header';
 import ShowArticle from './ShowArticle';
 import ShowArticleRef from './ShowArticleRef';
 import { routerActions } from 'react-router-redux';
-
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
+import WaitPanel from './common/WaitPanel';
 
 type ArticleListPublishProps =
     AccountStore.AccountState
@@ -101,9 +100,7 @@ class ArticleListPublish extends React.Component<ArticleListPublishProps, {}> {
 
                     <Header />
 
-                    <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                        <img src={waitGif} ></img>
-                    </div>
+                    <WaitPanel isContentReady={this.contentReady} />
 
                     <div className="container open-line"></div>
 

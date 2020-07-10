@@ -11,8 +11,8 @@ import Header from './header/Header';
 import ShowArticle from './ShowArticle';
 import ShowArticleRef from './ShowArticleRef';
 import { routerActions } from 'react-router-redux';
+import WaitPanel from './common/WaitPanel';
 
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
 
 type ArticleListTranslationProps =
     AccountStore.AccountState
@@ -97,9 +97,7 @@ class ArticleListTranslation extends React.Component<ArticleListTranslationProps
 
                 <Header />
 
-                <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                    <img src={waitGif} ></img>
-                </div>
+                <WaitPanel isContentReady={this.contentReady} />
 
                 <div className="container open-line"></div>
 

@@ -9,8 +9,7 @@ import ErrorMsg from '../message/errormsg';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import { routerActions } from 'react-router-redux';
-
-const waitGif: string = require('../theme/newspaper/img/wait.gif');
+import WaitPanel from './common/WaitPanel';
 
 type ValueDescriptionProps =
     AccountStore.AccountState
@@ -86,9 +85,7 @@ class ValueDescription extends React.Component<ValueDescriptionProps, {}> {
 
                     <Header />
 
-                    <div className={(!this.contentReady ? "wait-panel" : "wait-panel-disabled")}>
-                        <img src={waitGif} ></img>
-                    </div>
+                    <WaitPanel isContentReady={this.contentReady} />
 
                     <div className="container open-line"></div>
 
